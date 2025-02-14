@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendario Fórmula 1 - Temporada 2025</title>
     <!-- Enlace a Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Enlace a FontAwesome para íconos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <!-- Estilos personalizados -->
     <style>
         body {
@@ -13,61 +16,158 @@
             background-color: #f8f9fa;
             color: #343a40;
         }
+
         .calendar-section {
             padding: 40px 20px;
         }
+
         .race-card {
             border: 1px solid #ddd;
             border-radius: 10px;
-            padding: 15px;
+            padding: 20px;
             margin-bottom: 20px;
             background-color: white;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
+        .race-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
         .race-card-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
+
         .race-card-header h5 {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             font-weight: bold;
             margin: 0;
-        }
-        .race-card-header span {
-            font-size: 1rem;
             color: #c00000; /* Rojo característico de la F1 */
         }
+
+        .race-card-header span {
+            font-size: 1rem;
+            color: #6c757d;
+        }
+
         .race-details p {
             margin: 5px 0;
             font-size: 0.9rem;
             color: #6c757d;
         }
+
+        .race-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .flag-icon {
+            width: 24px;
+            height: 16px;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+
         .footer {
             background-color: #111111;
             color: white;
             text-align: center;
             padding: 20px 0;
         }
+
         .footer a {
             color: #c00000;
             text-decoration: none;
             margin: 0 10px;
         }
+
         .footer a:hover {
             color: #ffffff;
         }
+
+        .navbar-brand img {
+            max-height: 40px;
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            color: #343a40;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #c00000;
+        }
+
+        .navbar-nav .nav-link.active {
+            color: #c00000;
+            font-weight: bold;
+        }
     </style>
 </head>
+
 <body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img id="f1logo" src="./img/F1_App_Red_Logo_White_Background.webp" alt="F1 Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Calendario</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pilotos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Equipos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Noticias</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <!-- Sección del calendario -->
     <section class="calendar-section">
         <div class="container">
             <h2 class="text-center mb-4">Calendario Fórmula 1 - Temporada 2025</h2>
             <div class="row" id="calendarRow">
-                <!-- Las tarjetas se generarán dinámicamente aquí -->
+                <!-- Ejemplo de tarjeta de carrera -->
+                <div class="col-md-4">
+                    <div class="race-card">
+                        <div class="race-card-header">
+                            <h5>Gran Premio de Mónaco</h5>
+                            <span><i class="fas fa-flag-checkered"></i> 25 Mayo 2025</span>
+                        </div>
+                        <div class="race-image">
+                            <img src="https://via.placeholder.com/400x200" alt="Circuito de Mónaco">
+                        </div>
+                        <div class="race-details">
+                            <p><i class="fas fa-map-marker-alt"></i> Montecarlo, Mónaco</p>
+                            <p><i class="fas fa-clock"></i> 15:00 Hora Local</p>
+                            <p><i class="fas fa-flag"></i> Vueltas: 78</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Más tarjetas se generarán dinámicamente aquí -->
             </div>
         </div>
     </section>
@@ -76,205 +176,15 @@
     <footer class="footer">
         <div class="container text-center">
             <p>&copy; 2025 Fórmula 1. Todos los derechos reservados.</p>
+            <div>
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Términos y Condiciones</a>
+                <a href="#">Contacto</a>
+            </div>
         </div>
     </footer>
 
-    <!-- Enlace a Bootstrap JS y Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Script para generar el calendario dinámicamente -->
-    <script>
-        const calendarData = [
-            {
-                "ronda": 1,
-                "gran_premio": "Australia",
-                "fechas": "14 - 16 Marzo",
-                "circuito": "Albert Park",
-                "foto": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Australia%20carbon.png"
-            },
-            {
-                "ronda": 2,
-                "gran_premio": "China",
-                "fechas": "21 - 23 Marzo",
-                "circuito": "Shanghai International Circuit",
-                "foto": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/China%20carbon.png"
-            },
-            {
-                "ronda": 3,
-                "gran_premio": "Japón",
-                "fechas": "04 - 06 Abril",
-                "circuito": "Suzuka International Racing Course",
-                "foto": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Japan%20carbon.png"
-            },
-            {
-                "ronda": 4,
-                "gran_premio": "Baréin",
-                "fechas": "11 - 13 Abril",
-                "circuito": "Bahrain International Circuit",
-                "foto": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Bahrain%20carbon.png"
-            },
-            {
-                "ronda": 5,
-                "gran_premio": "Arabia Saudí",
-                "fechas": "18 - 20 Abril",
-                "circuito": "Jeddah Street Circuit",
-                "foto": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Saudi%20Arabia%20carbon.png"
-            },
-            {
-                "ronda": 6,
-                "gran_premio": "Miami",
-                "fechas": "02 - 04 Mayo",
-                "circuito": "Miami International Autodrome",
-                "foto": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Miami%20carbon.png"
-            },
-            {
-                "ronda": 7,
-                "gran_premio": "Emilia Romaña",
-                "fechas": "16 - 18 Mayo",
-                "circuito": "Autodromo Enzo e Dino Ferrari",
-                "foto": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Emilia-Romagna%20carbon.png"
-            },
-            {
-                "ronda": 8,
-                "gran_premio": "Mónaco",
-                "fechas": "23 - 25 Mayo",
-                "circuito": "Circuit de Monaco",
-                "foto": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Monaco%20carbon.png"
-            },
-            {
-                "ronda": 9,
-                "gran_premio": "España",
-                "fechas": "30 Mayo - 01 Junio",
-                "circuito": "Circuit de Barcelona-Catalunya",
-                "foto": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Spain%20carbon.png"
-            },
-            {
-                "ronda": 10,
-                "gran_premio": "Canadá",
-                "fechas": "13 - 15 Junio",
-                "circuito": "Circuit Gilles Villeneuve",
-                "foto": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Canada%20carbon.png"
-            },
-            {
-                "ronda": 11,
-                "gran_premio": "Austria",
-                "fechas": "27 - 29 Junio",
-                "circuito": "Red Bull Ring",
-                "foto": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Austria%20carbon.png"
-            },
-            {
-                "ronda": 12,
-                "gran_premio": "Gran Bretaña",
-                "fechas": "04 - 06 Julio",
-                "circuito": "Silverstone Circuit",
-                "foto":"https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Great%20Britain%20carbon.png"
-            },
-            {
-                "ronda": 13,
-                "gran_premio": "Bélgica",
-                "fechas": "25 - 27 Julio",
-                "circuito": "Circuit de Spa-Francorchamps",
-                "foto": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Belgium%20carbon.png"
-            },
-            {
-                "ronda": 14,
-                "gran_premio": "Hungría",
-                "fechas": "01 - 03 Agosto",
-                "circuito": "Hungaroring",
-                "foto": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Hungary%20carbon.png"
-            },
-            {
-                "ronda": 15,
-                "gran_premio": "Países Bajos",
-                "fechas": "29 - 31 Agosto",
-                "circuito": "Circuit Zandvoort",
-                "foto": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Netherlands%20carbon.png"
-            },
-            {
-                "ronda": 16,
-                "gran_premio": "Italia",
-                "fechas": "05 - 07 Septiembre",
-                "circuito": "Autodromo Nazionale Monza",
-                "foto": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Italy%20carbon.png"
-            },
-            {
-                "ronda": 17,
-                "gran_premio": "Azerbaiyán",
-                "fechas": "19 - 21 Septiembre",
-                "circuito": "Baku City Circuit",
-                "foto": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Azerbaijan%20carbon.png"
-            },
-            {
-                "ronda": 18,
-                "gran_premio": "Singapur",
-                "fechas": "03 - 05 Octubre",
-                "circuito": "Marina Bay Street Circuit",
-                "foto": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Singapore%20carbon.png"
-            },
-            {
-                "ronda": 19,
-                "gran_premio": "Estados Unidos",
-                "fechas": "17 - 19 Octubre",
-                "circuito": "Circuit of the Americas",
-                "foto": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/United%20States%20carbon.png"
-            },
-            {
-                "ronda": 20,
-                "gran_premio": "México",
-                "fechas": "24 - 26 Octubre",
-                "circuito": "Autódromo Hermanos Rodríguez",
-                "foto": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Mexico%20carbon.png"
-            },
-            {
-                "ronda": 21,
-                "gran_premio": "Brasil",
-                "fechas": "07 - 09 Noviembre",
-                "circuito": "Autódromo José Carlos Pace",
-                "foto":"https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Brazil%20carbon.png"
-            },
-            {
-                "ronda": 22,
-                "gran_premio": "Las Vegas",
-                "fechas": "20 - 22 Noviembre",
-                "circuito": "Las Vegas Strip Circuit",
-                "foto": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Las%20Vegas%20carbon.png"
-            },
-            {
-                "ronda": 23,
-                "gran_premio": "Catar",
-                "fechas": "28 - 30 Noviembre",
-                "circuito": "Lusail International Circuit",
-                "foto": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Qatar%20carbon.png"
-            },
-            {
-                "ronda": 24,
-                "gran_premio": "Abu Dabi",
-                "fechas": "05 - 07 Diciembre",
-                "circuito": "Yas Marina Circuit",
-                "foto": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Abu%20Dhabi%20carbon.png"
-            }
-        ];
-
-        document.addEventListener("DOMContentLoaded", function () {
-            const row = document.getElementById("calendarRow");
-
-            calendarData.forEach(event => {
-                const card = `
-                    <div class="col-md-6 col-lg-4">
-                        <div class="race-card">
-                            <div class="race-card-header">
-                                <h5>${event.gran_premio}</h5>
-                                <span>Ronda ${event.ronda}</span>
-                            </div>
-                            <div class="race-details">
-                                <p><strong>Fechas:</strong> ${event.fechas}</p>
-                                <p><strong>Circuito:</strong> ${event.circuito}</p>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                row.innerHTML += card;
-            });
-        });
-    </script>
+    <script src="../script/calendario.js"></script>
 </body>
+
 </html>
