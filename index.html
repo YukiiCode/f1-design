@@ -4,162 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>F1 - El espectáculo más rápido del mundo</title>
+    <title>F1 - Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        :root {
-            --f1-red: #e10600;
-            --f1-dark: #1f1f1f;
-        }
-
-        body {
-            background-color: var(--f1-dark);
-            color: white;
-            font-family: 'Titillium Web', Arial, sans-serif;
-        }
-
-        .navbar {
-            background: rgba(31, 31, 31, 0.95);
-            backdrop-filter: blur(5px);
-            border-bottom: 2px solid var(--f1-red);
-        }
-
-        .navbar-brand img {
-            height: 40px;
-        }
-
-        .nav-link {
-            color: white !important;
-            position: relative;
-            margin: 0 15px;
-            transition: 0.3s;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--f1-red);
-            transition: 0.3s;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        .hero-section {
-            height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                url('./img/2024-Formula1-Ferrari-SF-24-011-1080.jpg') center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            animation: fadeIn 1.5s ease-in;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            padding: 20px;
-        }
-
-        .hero-title {
-            font-size: 4.5rem;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .countdown {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
-
-        .race-card {
-            background: #2a2a2a;
-            border-radius: 15px;
-            overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid rgba(225, 6, 0, 0.3);
-        }
-
-        .race-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(225, 6, 0, 0.2);
-        }
-
-        .race-image {
-            height: 250px;
-            overflow: hidden;
-            position: relative;
-            margin: 0;
-            padding: 0;
-        }
-
-        .race-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s;
-        }
-
-        .race-card:hover .race-image img {
-            transform: scale(1.05);
-        }
-
-        .circuit-logo {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            height: 50px;
-            filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.7));
-        }
-
-        .footer {
-            background: var(--f1-dark);
-            padding: 40px 0;
-            margin-top: 80px;
-        }
-
-        .social-links a {
-            color: white;
-            font-size: 1.5rem;
-            margin: 0 15px;
-            transition: 0.3s;
-        }
-
-        .social-links a:hover {
-            color: var(--f1-red);
-            transform: translateY(-3px);
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
-
-            .race-card {
-                margin-bottom: 30px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
@@ -193,7 +41,6 @@
             </div>
         </div>
     </nav>
-
     <!-- Sección Hero -->
     <section class="hero-section">
         <div class="hero-content">
@@ -201,22 +48,81 @@
             <div class="countdown">
                 <h4>Próxima carrera en:</h4>
                 <div id="countdown">
-                    <p> <span id="days"></span> días, <span id="hours"></span> horas, <span
-                            id="minutes"></span> minutos</p>
+                    <p> <span id="days"></span> días, <span id="hours"></span> horas, <span id="minutes"></span> minutos
+                    </p>
                 </div>
             </div>
             <a href="#next-races" class="btn btn-danger btn-lg px-5 py-3">Ver Próximas Carreras</a>
         </div>
     </section>
-
     <!-- Sección de Carreras -->
     <section id="next-races" class="py-5">
         <div class="container">
             <h2 class="text-center mb-5 display-4">Próximas Carreras 2025</h2>
-            <div class="row g-4" id="races-container"></div>
+            <div class="row g-4">
+                <!-- Carrera 1 -->
+                <div class="col-md-4">
+                    <div class="race-card">
+                        <div class="race-image">
+                            <img src="https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/flags%2016x9/australia-flag.png"
+                                class="circuit-logo">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-danger">Gran Premio de Australia</h3>
+                            <p class="text-muted">Albert Park</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="fas fa-calendar-alt me-2"></i>
+                                    16 de marzo de 2024
+                                </div>
+                                <span class="badge bg-danger">Melbourne, Australia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carrera 2 -->
+                <div class="col-md-4">
+                    <div class="race-card">
+                        <div class="race-image">
+                            <img src="https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/flags%2016x9/china-flag.png"
+                                class="circuit-logo">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-danger">Gran Premio de China</h3>
+                            <p class="text-muted">Shanghai</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="fas fa-calendar-alt me-2"></i>
+                                    23 de marzo de 2024
+                                </div>
+                                <span class="badge bg-danger">Shanghai, China</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carrera 3 -->
+                <div class="col-md-4">
+                    <div class="race-card">
+                        <div class="race-image">
+                            <img src="https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/flags%2016x9/japan-flag.png"
+                                class="circuit-logo">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-danger">Gran Premio de Japón</h3>
+                            <p class="text-muted">Miami International Autodrome</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="fas fa-calendar-alt me-2"></i>
+                                    6 de abril de 2024
+                                </div>
+                                <span class="badge bg-danger">Suzuka, Japón</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-
     <!-- Pie de página -->
     <footer class="footer">
         <div class="container text-center">
@@ -235,92 +141,20 @@
             <p class="mb-0">&copy; 2025 Formula One World Championship Limited</p>
         </div>
     </footer>
-
     <script>
-        // Datos de las carreras
-        const races = [
-            {
-                name: "Gran Premio de Australia",
-                date: "2024-03-16",
-                circuit: "Albert Park",
-                location: "Melbourne, Australia",
-                image: "https://cdn-8.motorsport.com/images/amp/0ERJ0bN0/s1000/f1-australian-gp-2023-race-fer-1.webp",
-                logo: "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/flags%2016x9/australia-flag.png"
-            },
-            {
-                name: "Gran Premio de China",
-                date: "2024-03-23",
-                circuit: "Shanghai",
-                location: "Shanghai, China",
-                image: "https://cdn-7.motorsport.com/images/amp/6aVjL380/s1000/f1-japanese-gp-2023-sergio-perez-r-1.webp",
-                logo: "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/flags%2016x9/china-flag.png"
-            },
-            {
-                name: "Gran Premio de Japón",
-                date: "2024-04-06",
-                circuit: "Miami International Autodrome",
-                location: "Suzuka, Japón",
-                image: "https://cdn-1.motorsport.com/images/amp/0Z3ndr00/s1000/f1-miami-gp-2023-race-max-ver-1.webp",
-                logo: "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/flags%2016x9/japan-flag.png"
-            }
-        ];
-
-        // Generar tarjetas de carrera
-        function generateRaceCards() {
-            const container = document.getElementById('races-container');
-
-            races.forEach(race => {
-                const raceDate = new Date(race.date);
-                const options = { day: 'numeric', month: 'long', year: 'numeric' };
-
-                const cardHTML = `
-                    <div class="col-md-4">
-                        <div class="race-card">
-                            <div class="race-image">
-                                <!--  <img src="${race.image}" alt="${race.name}">-->
-                                 <img src="${race.logo}" class="circuit-logo"> 
-                            </div>
-                            <div class="p-4">
-                                <h3 class="text-danger">${race.name}</h3>
-                                <p class="text-muted">${race.circuit}</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div>
-                                        <i class="fas fa-calendar-alt me-2"></i>
-                                        ${raceDate.toLocaleDateString('es-ES', options)}
-                                    </div>
-                                    <span class="badge bg-danger">${race.location}</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `;
-
-                container.innerHTML += cardHTML;
-            });
-        }
-
+        // Contador para la próxima carrera
         const fechaCarrera = new Date('2025-03-16T15:00:00').getTime();
-        const timer = setInterval(() => {
+        setInterval(() => {
             const ahora = new Date().getTime();
             const diferencia = fechaCarrera - ahora;
-
             const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
             const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
-
             document.getElementById('days').innerHTML = dias;
             document.getElementById('hours').innerHTML = horas;
             document.getElementById('minutes').innerHTML = minutos;
         }, 1000);
-
-        // Inicializar
-        document.addEventListener('DOMContentLoaded', () => {
-            generateRaceCards();
-            setInterval(updateCountdown, 1000);
-        });
     </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

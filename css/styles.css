@@ -32,3 +32,160 @@ body {
 .footer a:hover {
     color: #ffffff;
 }
+
+
+/*  */
+/*  */
+
+:root {
+    --f1-red: #e10600;
+    --f1-dark: #1f1f1f;
+}
+
+body {
+    background-color: var(--f1-dark);
+    color: white;
+    font-family: 'Titillium Web', Arial, sans-serif;
+}
+
+.navbar {
+    background: rgba(31, 31, 31, 0.95);
+    backdrop-filter: blur(5px);
+    border-bottom: 2px solid var(--f1-red);
+}
+
+.navbar-brand img {
+    height: 40px;
+}
+
+.nav-link {
+    color: white !important;
+    position: relative;
+    margin: 0 15px;
+    transition: 0.3s;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--f1-red);
+    transition: 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.hero-section {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('../img/2024-Formula1-Ferrari-SF-24-011-1080.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.countdown {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.race-card {
+    background: #2a2a2a;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(225, 6, 0, 0.3);
+}
+
+.race-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(225, 6, 0, 0.2);
+}
+
+.race-image {
+    height: 215px;
+    overflow:visible;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.race-image img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: 200px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Mantiene la proporción y cubre el área */
+    display: block; /* Elimina espacios debajo de la imagen */
+    padding-left: 20px;
+}
+
+.race-card:hover .race-image img {
+    transform: scale(1.05);
+}
+
+.circuit-logo {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    height: 50px;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.7));
+}
+
+.footer {
+    background: var(--f1-dark);
+    padding: 40px 0;
+    margin-top: 80px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 15px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--f1-red);
+    transform: translateY(-3px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .race-card {
+        margin-bottom: 30px;
+    }
+}
