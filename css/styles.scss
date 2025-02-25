@@ -5,6 +5,35 @@ $text-color: #ffffff;
 $font-primary: 'Arial', sans-serif;
 $transition-speed: 0.3s;
 
+// Theme Colors
+$theme-colors: (
+  'primary': $primary-color,
+  'secondary': $secondary-color,
+  'light': $text-color,
+  'dark': darken($secondary-color, 10%)
+);
+
+// Breakpoints
+$breakpoints: (
+  'xs': 375px,
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px,
+  'xxl': 1400px
+);
+
+// Spacing
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3
+);
+
 // Mixins
 @mixin flex-center {
   display: flex;
@@ -19,6 +48,36 @@ $transition-speed: 0.3s;
   }
 }
 
+@mixin gradient($direction, $color1, $color2) {
+  background: linear-gradient($direction, $color1, $color2);
+}
+
+@mixin card-base {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+@mixin responsive($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+
+// Animations
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
 // Global Styles
 body {
   font-family: $font-primary;
@@ -26,6 +85,33 @@ body {
   color: $text-color;
   margin: 0;
   padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Utility Classes
+.text-gradient {
+  background: linear-gradient(45deg, $primary-color, lighten($primary-color, 20%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+@each $name, $value in $spacers {
+  .m-#{$name} { margin: $value; }
+  .p-#{$name} { padding: $value; }
+}
+
+@each $name, $color in $theme-colors {
+  .bg-#{$name} { background-color: $color; }
+  .text-#{$name} { color: $color; }
 }
 
 // Navigation
