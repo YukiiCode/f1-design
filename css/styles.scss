@@ -1,0 +1,219 @@
+// Variables
+$primary-color: #e10600;
+$secondary-color: #15151e;
+$text-color: #ffffff;
+$font-primary: 'Arial', sans-serif;
+$transition-speed: 0.3s;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin hover-effect {
+  transition: transform $transition-speed ease;
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+// Global Styles
+body {
+  font-family: $font-primary;
+  background-color: $secondary-color;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+}
+
+// Navigation
+.navbar {
+  background-color: rgba($secondary-color, 0.9);
+  padding: 1rem 0;
+  transition: background-color $transition-speed ease;
+
+  &.scrolled {
+    background-color: $secondary-color;
+  }
+
+  .navbar-brand img {
+    height: 40px;
+  }
+
+  .nav-link {
+    color: $text-color;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color $transition-speed ease;
+
+    &:hover, &.active {
+      color: $primary-color;
+    }
+  }
+}
+
+// Hero Section
+.hero-section {
+  height: 100vh;
+  background: linear-gradient(rgba($secondary-color, 0.6), rgba($secondary-color, 0.8)),
+              url('../img/hero-img.jpg') center/cover no-repeat fixed;
+  @include flex-center;
+  text-align: center;
+
+  .hero-content {
+    padding: 3rem;
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    border: 1px solid rgba($text-color, 0.1);
+
+    .hero-title {
+      font-size: 5rem;
+      font-weight: 800;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .countdown {
+      background-color: rgba($secondary-color, 0.85);
+      padding: 2.5rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+      h4 {
+        color: $primary-color;
+        margin-bottom: 1.5rem;
+        font-size: 1.8rem;
+      }
+
+      #countdown {
+        font-size: 2rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
+
+// Race Cards
+.race-card {
+  background-color: lighten($secondary-color, 5%);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  @include hover-effect;
+
+  .race-image {
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      background: linear-gradient(to top, rgba($secondary-color, 0.8), transparent);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform $transition-speed ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  h3 {
+    color: $primary-color;
+    margin: 1.5rem 0;
+    font-weight: 600;
+  }
+
+  .badge {
+    background-color: $primary-color;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+// Video Section
+.bg-dark {
+  background: linear-gradient(135deg, darken($secondary-color, 8%), darken($secondary-color, 3%));
+  padding: 5rem 0;
+
+  .carousel {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 4rem;
+  }
+}
+
+// Footer
+.footer {
+  background-color: $secondary-color;
+  padding: 3rem 0;
+  margin-top: 2rem;
+
+  .social-links {
+    a {
+      color: $text-color;
+      font-size: 1.5rem;
+      margin: 0 1rem;
+      transition: color $transition-speed ease;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  .footer-links {
+    a {
+      text-decoration: none;
+      transition: color $transition-speed ease;
+
+      &:hover {
+        color: $primary-color !important;
+      }
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .hero-section {
+    .hero-content {
+      padding: 1.5rem;
+      
+      .hero-title {
+        font-size: 3rem;
+      }
+
+      .countdown {
+        padding: 1.5rem;
+        
+        h4 {
+          font-size: 1.4rem;
+        }
+
+        #countdown {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+
+  .race-card .race-image {
+    height: 200px;
+  }
+}

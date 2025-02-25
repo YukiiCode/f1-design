@@ -21,6 +21,17 @@
     align-items: center;
     background-color: #1e1e1e; /* Color de fondo oscuro */
   }
+
+  .hero-section {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('../img/aston-img-hero.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in;
+}
   
   .team-logo::before {
     content: '';

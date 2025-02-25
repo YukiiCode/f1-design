@@ -1,45 +1,67 @@
-/* Nav */
+:root {
+    --f1-red: #e10600;
+    --f1-dark: #1f1f1f;
+    --f1-gray: #6c757d;
+    --f1-light: #ffffff;
+    --transition-speed: 0.3s;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Titillium Web', Arial, sans-serif;
+    background-color: var(--f1-dark);
+    color: var(--f1-light);
+    line-height: 1.6;
+}
+
+/* Navigation */
 .navbar {
-    background-color: white;
+    background: rgba(31, 31, 31, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--f1-red);
+    padding: 1rem 0;
+    transition: all var(--transition-speed) ease;
+}
+
+.navbar.scrolled {
+    padding: 0.5rem 0;
+    background: rgba(31, 31, 31, 0.98);
 }
 
 .navbar-brand img {
     height: 40px;
+    transition: transform var(--transition-speed) ease;
 }
 
-/* Cuerpo */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #1e1e1e;
-    color: #feffff;
+.navbar-brand:hover img {
+    transform: scale(1.05);
 }
-
-
 
 /* Footer */
 .footer {
-    background-color: #111111;
-    padding: 30px 0;
+    background-color: rgba(17, 17, 17, 0.95);
+    padding: 40px 0;
+    margin-top: 4rem;
+    border-top: 2px solid var(--f1-red);
 }
 
 .footer a {
-    color: #c00000;
+    color: var(--f1-red);
     text-decoration: none;
-    margin: 0 10px;
-    transition: color 0.3s ease-in-out;
+    margin: 0 15px;
+    transition: all var(--transition-speed) ease;
+    font-weight: 500;
 }
 
 .footer a:hover {
-    color: #ffffff;
-}
-
-
-/*  */
-/*  */
-
-:root {
-    --f1-red: #e10600;
-    --f1-dark: #1f1f1f;
+    color: var(--f1-light);
+    transform: translateY(-2px);
 }
 
 body {
