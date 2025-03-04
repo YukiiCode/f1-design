@@ -140,6 +140,9 @@ $spacers: (0: 0, 1: $spacer * 0.25, 2: $spacer * 0.5, 3: $spacer);
 
 ## Guía de Estilo
 
+![El texto del párrafo](https://github.com/user-attachments/assets/e051947d-833b-436d-bb45-607e6a4b8057)
+
+
 ### Principios de Diseño
 1. **Jerarquía Visual**: 
    - Sistema de escala modular (1.333)
