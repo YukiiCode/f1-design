@@ -1,4 +1,8 @@
-# Documentación Técnica del Proyecto F1 Design
+# Documentación Técnica del Proyecto
+
+Proyecto realizado para el modulo de diseño de interfaces web
+
+Este proyecto sigue como temática la f1
 
 ## Estructura del Proyecto
 ```
