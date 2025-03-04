@@ -12,7 +12,7 @@
 </head>
 <body>
   <!-- Barra de navegación -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" aria-label="Main team navigation">
     <div class="container">
       <a class="navbar-brand" href="#">
         <img src="https://www.formula1.com/etc/designs/fom-website/images/f1_logo.svg" alt="F1 Logo">
@@ -29,7 +29,7 @@
             <a class="nav-link" href="../html/pilotos.html">Pilotos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#">Equipos</a>
+            <a class="nav-link active" href="#" aria-current="page">Equipos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../html/noticias.html">Noticias</a>
@@ -54,9 +54,9 @@
       <div class="row g-4">
         <!-- Equipo 1: Red Bull Racing -->
         <div class="col-md-4">
-          <div class="team-card">
+          <article class="team-card" role="article">
             <div class="team-logo">
-              <img src="https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2025/red-bull-racing.png" alt="Red Bull Racing" class="team-photo">
+              <img src="https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2025/red-bull-racing.png" alt="Red Bull Racing 2025 Car" class="team-photo" role="img" aria-describedby="rb15-description">
             </div>
             <div class="p-4">
               <h3 class="text-danger">Red Bull Racing</h3>
@@ -75,7 +75,7 @@
 
         <!-- Equipo 2: Mercedes-AMG Petronas -->
         <div class="col-md-4">
-          <div class="team-card">
+          <article class="team-card" role="article">
             <div class="team-logo">
               <img src="https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2025/mercedes.png" alt="Mercedes-AMG Petronas" class="team-photo">
             </div>
@@ -96,7 +96,7 @@
 
         <!-- Equipo 3: Ferrari -->
         <div class="col-md-4">
-          <div class="team-card">
+          <article class="team-card" role="article">
             <div class="team-logo">
               <img src="https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2025/ferrari.png" alt="Scuderia Ferrari" class="team-photo">
             </div>
@@ -117,7 +117,7 @@
 
         <!-- Equipo 4: McLaren -->
         <div class="col-md-4">
-          <div class="team-card">
+          <article class="team-card" role="article">
             <div class="team-logo">
               <img src="https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2025/mclaren.png" alt="McLaren" class="team-photo">
             </div>
@@ -138,7 +138,7 @@
 
         <!-- Equipo 5: Alpine -->
         <div class="col-md-4">
-          <div class="team-card">
+          <article class="team-card" role="article">
             <div class="team-logo">
               <img src="https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2025/alpine.png" alt="Alpine" class="team-photo">
             </div>
@@ -159,7 +159,7 @@
 
         <!-- Equipo 6: Aston Martin Aramco -->
         <div class="col-md-4">
-          <div class="team-card">
+          <article class="team-card" role="article">
             <div class="team-logo">
               <img src="https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2025/aston-martin.png" alt="Aston Martin Aramco" class="team-photo">
             </div>

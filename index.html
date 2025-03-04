@@ -14,10 +14,10 @@
 
 <body>
     <!-- Barra de navegación -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" aria-label="Main navigation">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="https://www.formula1.com/etc/designs/fom-website/images/f1_logo.svg" alt="F1 Logo">
+                <img src="https://www.formula1.com/etc/designs/fom-website/images/f1_logo.svg" alt="Formula 1 Official Logo" role="img">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -25,7 +25,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Inicio</a>
+                        <a class="nav-link active" href="#" aria-current="page">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./html/pilotos.html">Pilotos</a>
@@ -43,7 +43,7 @@
     <section class="hero-section animate-fade-in">
         <div class="hero-content">
             <h1 class="hero-title text-gradient ">Fórmula 1</h1>
-            <div class="countdown">
+            <div class="countdown" aria-live="polite">
                 <h4 class="animate-fade-in">Próxima carrera en:</h4>
                 <div id="countdown" class="animate-fade-in">
                     <p> <span id="days"></span> días, <span id="hours"></span> horas, <span id="minutes"></span> minutos
@@ -126,14 +126,14 @@
         <div class="container text-center">
             <h2 class="display-5 mb-4 text-gradient">Momentos destacados</h2>
             <!-- Carousel Section -->
-            <div id="f1Carousel" class="carousel slide mb-5" data-bs-ride="carousel">
+            <div id="f1Carousel" class="carousel slide mb-5" data-bs-ride="carousel" role="region" aria-label="Race highlights">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#f1Carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#f1Carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#f1Carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner rounded shadow-lg">
-                    <div class="carousel-item active">
+                    <div class="carousel-item active" role="group" aria-roledescription="slide">
                         <img src="./img/2024-Formula1-Ferrari-SF-24-011-1080.jpg" class="d-block w-100" alt="Ferrari SF-24">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Ferrari SF-24</h5>
@@ -166,7 +166,7 @@
             </div>
             <!-- Video Section -->
             <div class="ratio ratio-16x9 shadow-lg rounded overflow-hidden" style="max-width: 1000px; margin: 0 auto; box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);">
-                <iframe src="https://www.youtube.com/embed/KDC_WcR0wjc" 
+                <iframe src="https://www.youtube.com/embed/KDC_WcR0wjc" title="F1 2024 Season Highlights" 
                     title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen
