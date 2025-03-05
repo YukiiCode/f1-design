@@ -34,7 +34,7 @@ Este proyecto sigue como temática la f1
 - JavaScript modularizado por funcionalidad
 
 ## Especificaciones Técnicas
-```markdown
+
 - **Core Framework**:
   - Bootstrap 5.3.0-alpha1 (CSS/JS utilities)
   - Sass 1.58.0 (Preprocesador CSS)
@@ -53,7 +53,7 @@ Este proyecto sigue como temática la f1
   - Node Sass compiler (SCSS → CSS)
   - LiveReload para desarrollo
   - Optimización de assets en producción
-```
+
 
 ## Arquitectura SCSS
 ### Sistema de Capas
@@ -158,14 +158,14 @@ $spacers: (0: 0, 1: $spacer * 0.25, 2: $spacer * 0.5, 3: $spacer);
    - Padding adaptivo por breakpoint
 
 ### Tipografía
-```markdown
+
 | Elemento | Familia | Fuente | Tamaño | Ratio | Peso | Color |
 |----------|---------|--------|--------|-------|------|-------|
 | H1 | Roboto Condensed | [Google Fonts](https://fonts.google.com) | 2.5rem | 1.2 | 700 | `$text-gradient` |
 | Body Text | Roboto | [Google Fonts](https://fonts.google.com) | 1rem | 1.6 | 400 | `rgba($text-color, 0.9)` |
 | Navbar | Formula1 Display | [F1 Assets](https://www.formula1.com) | 1.1rem | 1.4 | 500 | `$text-color` |
 | Botones | Roboto Condensed | CDN | 1.25rem | 1 | 600 | `#ffffff` |
-```
+
 
 ### Sistema de Animación
 ```scss
@@ -202,7 +202,7 @@ $animation-easing: (
 ## Accesibilidad
 
 ### Principios Generales
-```markdown
+
 1. **Navegación y Estructura**:
  - Orden de tabulación lógico y predecible (tabindex)
  - Skip links para saltar al contenido principal
@@ -236,10 +236,10 @@ $animation-easing: (
  - Compatibilidad con tecnologías asistivas
  - HTML válido y bien formado
  - WAI-ARIA 1.1 implementado correctamente
-```
+
 
 ### Implementación WCAG 2.1
-```markdown
+
 1. **Perceptible**:
  - Textos alternativos para imágenes
  - Subtítulos para videos
@@ -260,10 +260,10 @@ $animation-easing: (
 4. **Robusto**:
  - Compatible con herramientas actuales
  - Código limpio y validado
-```
+
 
 ### Validación y Testing
-```markdown
+
 1. **Herramientas Automatizadas**:
  - axe DevTools para testing automático
  - WAVE para evaluación de contraste
@@ -287,7 +287,7 @@ $animation-easing: (
  - Puntuación Lighthouse > 90
  - Optimización CLS/CWV
  - FID < 100ms
-```
+
 
 ### Especificaciones de Componentes
 
