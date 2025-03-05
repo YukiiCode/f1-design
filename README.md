@@ -389,6 +389,15 @@ El control de versiones del proyecto se lleva a traves de github
 ![Tablero de github](img/git.png)
 
 
+### Testeo Acesibilidad
+
+- Accessibilitychecker.org
+![image](https://github.com/user-attachments/assets/1cfd55e8-bab0-46b2-9c80-3f46578d1ff4)
+
+- Taw.net
+![image](https://github.com/user-attachments/assets/8fff8a83-3033-4223-b77c-6d7412cabb95)
+
+
 ### Bibliografía y recursos utilizados
 
 - Enuin
@@ -402,3 +411,7 @@ https://www.web-leb.com/es/code
 
 - Busqueda de recursos:
 https://stackoverflow.com/
+
+- Accesibilidad:
+https://www.accessibilitychecker.org/
+
