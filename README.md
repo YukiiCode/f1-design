@@ -388,4 +388,17 @@ El control de versiones del proyecto se lleva a traves de github
 
 ![Tablero de github](img/git.png)
 
-Link al proyecto de github: https://github.com/YukiiCode/f1-design
+
+### Bibliografía y recursos utilizados
+
+- Enuin
+https://www.eniun.com/formatos-archivos-video-conversiones-web/
+https://www.eniun.com/animaciones-keyframes-animation/
+https://www.freepik.com/
+
+- Plantillas
+https://nicepage.com/es/plantillas-css
+https://www.web-leb.com/es/code
+
+- Busqueda de recursos:
+https://stackoverflow.com/
