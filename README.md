@@ -106,7 +106,7 @@ $spacers: (0: 0, 1: $spacer * 0.25, 2: $spacer * 0.5, 3: $spacer);
 ```
 
 ## Sistema de Color
-```markdown
+
 | Variable            | Uso                              | Ejemplo de Implementación                 |
 |---------------------|-----------------------------------|--------------------------------------------|
 | `$primary-color`    | Botones, acentos visuales         | `background: $primary-color;`              |
@@ -123,7 +123,7 @@ $spacers: (0: 0, 1: $spacer * 0.25, 2: $spacer * 0.5, 3: $spacer);
     padding: 0.75rem 1.5rem;
   }
 }
-```
+
 
 **Accesibilidad**:
 - Contraste mínimo 4.5:1 para texto
