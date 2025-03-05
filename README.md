@@ -6,10 +6,6 @@ Link: https://daw2.ieslamarisma.net/proyectos/2025/fernandonieves/proyectos/dise
 
 ![image](https://github.com/user-attachments/assets/f0aa8a88-fec9-44c1-a156-467e8167b075)
 
-- Explicacion hero section:
-![image](https://github.com/user-attachments/assets/02665830-c48c-42fe-9862-98954b1ea227)
-
-
 Este proyecto sigue como temática la f1
 
 ## Estructura del Proyecto
