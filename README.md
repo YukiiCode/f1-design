@@ -2,6 +2,9 @@
 
 Proyecto realizado para el modulo de diseño de interfaces web
 
+![image](https://github.com/user-attachments/assets/f0aa8a88-fec9-44c1-a156-467e8167b075)
+
+
 Este proyecto sigue como temática la f1
 
 ## Estructura del Proyecto
