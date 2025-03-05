@@ -4,6 +4,9 @@ Proyecto realizado para el modulo de diseño de interfaces web
 
 ![image](https://github.com/user-attachments/assets/f0aa8a88-fec9-44c1-a156-467e8167b075)
 
+- Explicacion hero section:
+![image](https://github.com/user-attachments/assets/02665830-c48c-42fe-9862-98954b1ea227)
+
 
 Este proyecto sigue como temática la f1
 
@@ -399,6 +402,9 @@ El control de versiones del proyecto se lleva a traves de github
 
 - Taw.net
 ![image](https://github.com/user-attachments/assets/8fff8a83-3033-4223-b77c-6d7412cabb95)
+
+- Chequeo de contraste
+![image](https://github.com/user-attachments/assets/0527e6a0-87fd-40bc-9b4d-6a565b17b1b2)
 
 
 ### Bibliografía y recursos utilizados
